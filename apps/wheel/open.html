@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+The Lucky Wheel
+</title>
+</head>
+<body bgcolor="#000000"
+text="#000000"
+link="#000000"
+alink="#000000"
+vlink="#000000">
+
+<style>
+body {
+	background-image: url("img/bg.png");
+	background-position: top center;
+	background-attachment: fixed;
+	background-size: cover;
+}
+</style>
+
+<style>
+	a {
+    		outline: 0;
+	}
+	@font-face {
+  		font-family: pixel;
+  		src: url(fonts/pixel.ttf);
+	}
+</style>
+
+<font face="pixel" size="5" color="#000000" align="abs_middle" onclick="javascript:parent.location = 'index.html'">RESET</font>
+
+<center>
+<font id="wheelTitle" face="pixel" size="10" color="#ffffff">Click on the Lucky Wheel!!!</font>
+</center>
+
+<br />
+
+<center>
+<img id="wheel" src="img/A.png" width="40%" onclick="javascript:wheelTitle.color = '#252525';javascript:wheel.src = 'img/wheel.gif';javascript:setTimeout(function() { parent.location = 'output.html'; }, 9000);">
+</center>
+
+</body>
+</html>

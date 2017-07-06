@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+Raptor v1.0
+</title>
+<meta http-equiv="REFRESH" content="15; url=reload.html">
+<link rel="icon" href="img/icon32x32.ico" type="image/ico" />
+<script type="text/javascript" src="js/index.js"></script>
+</head>
+<body onload=""
+bgcolor="#000000"
+text="#000000"
+link="#000000"
+alink="#000000"
+vlink="#000000">
+
+<style>
+body {
+	background-image: url("img/space.png");
+	background-position: top center;
+	background-attachment: fixed;
+	background-size: cover;
+}
+</style>
+
+<style>
+	a {
+    		outline: 0;
+	}
+	@font-face {
+  		font-family: pixel;
+  		src: url(fonts/pixel.ttf);
+	}
+</style>
+
+<style>
+
+	.centered {
+  	position: absolute; /* or absolute */
+  	top: 50%;
+  	left: 25%;
+	}
+
+	.lefthand {
+  	position: absolute; /* or absolute */
+  	top: 50%;
+  	left: 13%;
+	}
+
+	.righthand {
+  	position: absolute; /* or absolute */
+  	top: 50%;
+  	left: 73%;
+	}
+
+</style>
+
+<style>
+
+ 	.disabled {
+        	pointer-events: none;
+        	cursor: default;
+       	 	opacity: 0.5;
+    	}
+
+</style>
+
+<style>
+	a {
+    		outline: 0;
+	}
+	@font-face {
+  		font-family: pixel;
+  		src: url(fonts/pixel.ttf);
+	}
+</style>
+
+<script lang="javascript">
+
+function updateAvatarPosition( e )
+{
+    var avatar = document.getElementById("avatar");
+    avatar.src = 'img/scout.gif';
+    avatar.style.left =  -101+e.x + "px";
+    avatar.style.top = -94+e.y + "px";
+    setTimeout(function() { avatar.src = 'img/scout.png'; }, 3000);
+}
+
+document.onclick = updateAvatarPosition;
+
+</script>
+
+<img src="img/P1.png">
+
+<script> 
+   function clickAndDisable(link) {
+     // disable subsequent clicks
+     link.onclick = function(event) {
+        event.preventDefault();
+     }
+   }   
+</script>
+
+<img id="avatar" src="img/hidden.png" style="position:absolute;" width="200">
+
+</body>
+</html>

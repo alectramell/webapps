@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+Raptor v1.0
+</title>
+<link rel="icon" href="img/icon32x32.ico" type="image/ico" />
+<script type="text/javascript" src="js/index.js"></script>
+</head>
+<body onload=""
+bgcolor="#000000"
+text="#000000"
+link="#000000"
+alink="#000000"
+vlink="#000000">
+
+<style>
+body {
+	background-image: url("img/black.png");
+	background-position: top center;
+	background-attachment: fixed;
+	background-size: cover;
+}
+</style>
+
+<style>
+	a {
+    		outline: 0;
+	}
+	@font-face {
+  		font-family: pixel;
+  		src: url(fonts/pixel.ttf);
+	}
+</style>
+
+<center>
+<img src="img/menu.png" usemap="#Main"> 
+</center>
+
+<script>
+document.onkeydown = checkKey;
+
+function checkKey(e) {
+
+    e = e || window.event;
+
+    if (e.keyCode == '38') {
+        XSHIP.src = 'img/shipUP.png';
+    }
+    else if (e.keyCode == '40') {
+        XSHIP.src = 'img/shipDOWN.png';
+    }
+    else if (e.keyCode == '37') {
+        XSHIP.src = 'img/shipLEFT.png';
+    }
+    else if (e.keyCode == '39') {
+        XSHIP.src = 'img/shipRIGHT.png';
+    }
+
+}
+</script>
+
+<map name="Ship" id="Ship">
+    <area href="#" onclick="javascript:XSHIP.src = 'img/menu.png';" shape="rect" coords="151,161,202,201" />
+</map>
+
+<map name="Main" id="Main">
+    <area title="Close" href="#" onclick="parent.location = 'main.html';" shape="rect" coords="428,54,471,96" />
+</map>
+
+<map name="Menu" id="Menu">
+    <area title="Close" href="#" onclick="parent.location = 'menu.html';" shape="rect" coords="428,54,471,96" />
+</map>
+
+<map name="Help" id="Help">
+    <area title="Close" href="#" onclick="javascript:XSHIP.src = 'img/shipUP.png';javascript:XSHIP.useMap='#Ship';" shape="rect" coords="428,54,471,96" />
+</map>
+
+<map name="Facebook" id="Facebook">
+    <area title="Close" href="#" onclick="javascript:XSHIP.src = 'img/shipUP.png';javascript:XSHIP.useMap='#Ship';" shape="rect" coords="428,54,471,96" />
+
+    <area title="Share" href="#" onclick="javascript:XSHIP.src = 'img/shipUP.png';javascript:XSHIP.useMap='#Ship';window.open('https://www.facebook.com/sharer.php?u=http://facebook.com/apollondma');" shape="rect" coords="133,281,351,354" />
+
+    <area title="Find Us On Facebook" href="#" onclick="javascript:XSHIP.src = 'img/shipUP.png';javascript:XSHIP.useMap='#Ship';window.open('https://www.facebook.com/apollondma');" shape="rect" coords="96,142,390,225" />
+</map>
+
+<map name="echoMSG" id="echoMSG">
+    <area title="Close" href="#" onclick="javascript:location.reload();" shape="rect" coords="428,54,471,96" />
+
+    <area title="Proceed.." href="#" onclick="javascript:parent.location = 'echorelay.html';" shape="rect" coords="225,313,80,238" />
+
+    <area title="Do Not Proceed.." href="#" onclick="javascript:location.reload();" shape="rect" coords="271,232,404,314" />
+</map>
+
+</body>
+</html>

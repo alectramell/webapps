@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+FireMark v1.0
+</title>
+<link rel="icon" href="img/icon32x32.ico" type="image/ico" />
+<script type="text/javascript" src="js/index.js"></script>
+</head>
+<body onload="javascript:document.getElementById('userName').innerHTML = localStorage.name;userLvl.src = localStorage.lvl;document.getElementById('userExp').innerHTML = localStorage.exp;"
+bgcolor="#000000"
+text="#000000"
+link="#000000"
+alink="#000000"
+vlink="#000000">
+
+<style>
+body {
+	background-image: url("img/bg.png");
+	background-position: top center;
+	background-attachment: fixed;
+	background-size: cover;
+}
+</style>
+
+<style>
+	a {
+    		outline: 0;
+	}
+	@font-face {
+  		font-family: pixel;
+  		src: url(fonts/pixel.ttf);
+	}
+</style>
+
+<center>
+<img src="img/break.png" width="10%">
+</center>
+
+<center>
+<img id="userLvl" src="img/fire.png" width="10%" onclick="javascript:alert('Your Ranking')">
+</center>
+
+<center>
+<img src="img/break.png" width="10%">
+</center>
+
+<center>
+<font id="userName" face="pixel" color="#ffffff" size="10">[ GUEST ]</font>
+</center>
+
+<center>
+<font face="pixel" color="#ffea00" size="5">EXP = </font><font id="userExp" face="pixel" color="#ffffff" size="5">[EXP]</font>
+</center>
+
+<center>
+<img src="img/break.png" width="100%">
+</center>
+
+<center>
+<button onclick="javascript:parent.location = 'index.html';"><font face="pixel" color="#000000" size="10">MENU</font></button>
+</center>
+
+</body>
+</html>

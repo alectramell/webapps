@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+The Apollonian
+</title>
+</head>
+<body
+background="img/space.png"
+text="#000000"
+link="#000000"
+alink="#000000"
+vlink="#000000">
+
+<div id="amazon-root"></div>
+<script type="text/javascript">
+
+   window.onAmazonLoginReady = function() {
+     amazon.Login.setClientId('amzn1.application-oa2-client.d174d2f81f2f4f5e8e30ba0cb71d2875');
+   };
+   (function(d) {
+     var a = d.createElement('script'); a.type = 'text/javascript';
+     a.async = true; a.id = 'amazon-login-sdk';
+     a.src = 'https://api-cdn.amazon.com/sdk/login1.js';
+     d.getElementById('amazon-root').appendChild(a);
+   })(document);
+
+</script>
+
+<script type="text/javascript">
+
+   document.getElementById('LoginWithAmazon').onclick = function() {
+   options = { scope : 'profile' };
+   amazon.Login.authorize(options,
+       'http://www.amazon.com');
+   return false;
+   };
+
+</script>
+
+<script type="text/javascript" src="js/lightbox.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+
+<a href="loadA.html"><img src="img/aEMBLEM.png" width="15%"></a>
+<a href="loadD.html"><img src="img/dEMBLEM.png" width="15%"></a>
+<a href="loadP.html"><img src="img/pEMBLEM.png" width="15%"></a>
+<a href="http://a.co/1nD1Fog" target="_new"><img src="img/kindle.png" width="15%"></a>
+
+<center>
+<img src="img/break.png" width="100%">
+</center>
+<center>
+<img src="img/break.png" width="100%">
+</center>
+<center>
+<img src="img/break.png" width="100%">
+</center>
+
+<center>
+<a href="img/DDOWN.gif" style="outline: none;" rel="lightbox"><img src="img/fly.gif" width="40%" onclick="dDATA();"></a>
+</center>
+
+</body>
+</html>
+

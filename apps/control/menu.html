@@ -1,0 +1,101 @@
+<html>
+<head>
+<title>
+RAPTOR
+</title>
+<meta http-equiv="REFRESH" content="300; url=index.html">
+<script type="text/javascript" src="js/pleaserotate.min.js"></script>
+<script type="text/javascript" src="js/savedata.js"></script>
+
+<style>
+body {
+	background-image: url("img/hide_touch.png");
+	background-position: top center;
+	background-attachment: fixed;
+	background-size: cover;
+}
+</style>
+
+</head>
+<body bgcolor="#000000"
+text="#ffffff"
+link="#ffffff"
+alink="#ffffff"
+vlink="#ffffff">
+
+<style>
+
+	.centered {
+  	position: absolute; /* or absolute */
+  	top: 50%;
+  	left: 25%;
+	}
+
+	.lefthand {
+  	position: absolute; /* or absolute */
+  	top: 50%;
+  	left: 13%;
+	}
+
+	.righthand {
+  	position: absolute; /* or absolute */
+  	top: 50%;
+  	left: 73%;
+	}
+
+</style>
+
+<style>
+
+ 	.disabled {
+        	pointer-events: none;
+        	cursor: default;
+       	 	opacity: 0.5;
+    	}
+
+</style>
+
+<style>
+	a {
+    		outline: 0;
+	}
+	@font-face {
+  		font-family: pixel;
+  		src: url(fonts/pixel.ttf);
+	}
+</style>
+
+<script lang="javascript">
+
+function updateAvatarPosition( e )
+{
+    var avatar = document.getElementById("avatar");
+    avatar.src = 'img/ch.png';
+    avatar.style.left =  -100+e.x + "px";
+    avatar.style.top = -98+e.y + "px";
+    // setTimeout(function() { avatar.src = 'img/hide_touch.png'; }, 2000);
+}
+
+document.onclick = updateAvatarPosition;
+
+</script>
+
+<script> 
+   function clickAndDisable(link) {
+     // disable subsequent clicks
+     link.onclick = function(event) {
+        event.preventDefault();
+     }
+   }   
+</script>
+
+<center>
+<a href="#" onclick="clickAndDisable(this);avatar.src = ('img/hide_touch.png');"><button onclick="window.close();">EXIT</button></a>
+</center>
+
+<img id="avatar" src="img/hidden.png" style="position:absolute;" width="200">
+
+</body>
+</html>
+
+

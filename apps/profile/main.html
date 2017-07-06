@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+FireMark v1.0
+</title>
+<link rel="icon" href="img/icon32x32.ico" type="image/ico" />
+<script type="text/javascript" src="js/index.js"></script>
+</head>
+<body onload="javascript:fbStatus.src = localStorage.fbRank;"
+bgcolor="#000000"
+text="#000000"
+link="#000000"
+alink="#000000"
+vlink="#000000">
+
+<style>
+body {
+	background-image: url("img/bg.png");
+	background-position: top center;
+	background-attachment: fixed;
+	background-size: cover;
+}
+</style>
+
+<style>
+	a {
+    		outline: 0;
+	}
+	@font-face {
+  		font-family: pixel;
+  		src: url(fonts/pixel.ttf);
+	}
+</style>
+
+<img id="fbStatus" src="img/nocheck.png" width="5%" onclick="javascript:alert('Facebook Badge')">
+
+<center>
+<img src="img/break.png" width="10%">
+</center>
+
+<center>
+<img src="img/break.png" width="50%">
+</center>
+
+<center>
+<button onclick="newGame();javascript:localStorage.fbRank = 'img/nocheck.png';" title="Reset All Game Data?"><font face="pixel" color="#000000" size="10">RESET</font></button>
+</center>
+
+<center>
+<img src="img/break.png" width="50%">
+</center>
+
+<center>
+<button onclick="loadGame();" title="Load Saved Game Data?"><font face="pixel" color="#000000" size="10">CONTINUE</font></button>
+</center>
+
+<center>
+<img src="img/break.png" width="50%">
+</center>
+
+<center>
+<a href="https://www.facebook.com/sharer.php?u=img/bg_load_mobile.png" target="_new"><button title="Share On Facebook?" onclick="javascript:fbStatus.src = 'img/check.png';	localStorage.exp = Number(localStorage.exp)+10;localStorage.fbRank = 'img/check.png'"><font face="pixel" color="#000000" size="10">SHARE</font></button></a>
+</center>
+
+</body>
+</html>
